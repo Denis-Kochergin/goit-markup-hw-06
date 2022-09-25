@@ -259,16 +259,21 @@ h2 {
   left: 0;
   width: 100%;
   height: 100%;
- opacity: 1;
- transition: var(--animation);
- background-color: rgba(0, 0, 0, 0.2);
- transition:  transform var(--animation); 
+  opacity: 1;
+  transition: var(--animation);
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: transform var(--animation);
 }
-.backdrop.is-hidden{
+
+.backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
-  
+
+}
+
+.contanier-register-form {
+  padding: 40px;
 }
 
 .modal {
@@ -280,12 +285,13 @@ h2 {
   background-color: var(--primary-white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  transform: translate(-50% , -50%) scale(1);
-  transition:  transform var(--animation); 
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform var(--animation);
 }
-.btn-modal{
+
+.btn-modal {
   position: absolute;
-  top:8px;
+  top: 8px;
   right: 8px;
   width: 30px;
   height: 30px;
@@ -294,6 +300,144 @@ h2 {
   background-color: var(--primary-white-color);
   cursor: pointer;
 }
+
+.btn-modal:hover {
+  fill: var(--active-color);
+  transition: fill var(--animation);
+}
+
+.btn-modal:focus {
+  fill: var(--active-color);
+  transition: fill var(--animation);
+}
+
+
+.register-form-tittle {
+  display: block;
+  font-family: 'Roboto';
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.register-form-field {
+  display: block;
+  margin: 0;
+  text-align: left;
+  position: relative;
+  margin-bottom: 10px;
+
+}
+
+.register-form-field:last-of-type {
+  margin-bottom: 20px;
+}
+
+.register-form-field:hover {
+  border-color: var(--active-color);
+  fill: var(--active-color);
+  transition: fill var(--animation), border-color:var(--animation);
+}
+
+.register-form-field:focus {
+  border-color: var(--active-color);
+  fill: var(--active-color);
+}
+
+.register-form-label {
+  font-family: 'Roboto';
+  font-size: 12px;
+  line-height: 1.16px;
+  letter-spacing: 0.01em;
+  color: #757575;
+  margin: 0;
+}
+
+.chekbox-agreement-form {
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.register-form-chekbox {
+  appearance: none;
+}
+
+.register-form-chekbox:checked+.chekbox-svg {
+  background-color: var(--active-color);
+  background-image: url(../images/icon\ check\ \(2\)\ \(1\).svg);
+  background-size: contain;
+  fill: var(--active-color);
+
+}
+
+.register-form-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-left: 42px;
+
+}
+
+.register-form-input:hover~.register-form-icon {
+  border-color: var(--active-color);
+  transition: fill var(--animation), border-color var(--animation);
+
+}
+
+.register-form-input:focus~.register-form-icon {
+  border-color: var(--active-color);
+  transition: border-color var(--animation);
+}
+
+.register-form-input:hover {
+  border-color: var(--active-color);
+  transition: fill var(--animation), border-color var(--animation);
+
+}
+
+.register-form-input:hover {
+  border-color: var(--active-color);
+  transition: border-color var(--animation);
+
+}
+
+.register-form-icon {
+  position: absolute;
+  left: 15px;
+  top: 14px;
+  transform: translateY(14px);
+}
+
+textarea {
+  width: 100%;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 12px 16px;
+  resize: none;
+}
+
+.btn-register {
+  cursor: pointer;
+}
+
+.btn-register:hover {
+  color: var(--primary-white-color);
+  background-color: var(--background-color-btn);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: color:var(--animation), box-shadow: var(--animation), background-color: var(--animation);
+}
+
+.btn-register:focus {
+  color: var(--primary-white-color);
+  background-color: var(--background-color-btn);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: color:var(--animation), box-shadow: var(--animation), background-color: var(--animation);
+}
+
 .btn {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
@@ -392,28 +536,32 @@ h2 {
   padding-left: 15px;
   padding-right: 15px;
 }
-.activity-work{
-position: relative;
+
+.activity-work {
+  position: relative;
 }
-.activity-work-text{
+
+.activity-work-text {
   display: flex;
   align-items: center;
   justify-content: center;
   bottom: 0;
   width: 100%;
   height: 70px;
-position: absolute;
-background-color: rgba(47, 48, 58, 0.8);
-color: var(--primary-white-color);
+  position: absolute;
+  background-color: rgba(47, 48, 58, 0.8);
+  color: var(--primary-white-color);
 }
-.activity-text{
+
+.activity-text {
   font-family: 'Roboto';
-font-weight: 700;
-font-size: 14px;
-line-height: 1.14;
-letter-spacing: 0.03em;
-text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
+
 .contanier-tittle-subtittle {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -493,7 +641,7 @@ text-transform: uppercase;
   align-items: center;
   justify-content: center;
   fill: var(--social-color);
-  transition: background-color var(--animation) , fill var(--animation);
+  transition: background-color var(--animation), fill var(--animation);
 }
 
 .social-link:hover {
@@ -538,7 +686,7 @@ text-transform: uppercase;
   justify-content: center;
   fill: var(--social-color);
   border-color: var(--social-color);
-  transition: fill var(--animation) , border-color var(--animation);
+  transition: fill var(--animation), border-color var(--animation);
 }
 
 .link-client-icon:focus {
@@ -575,7 +723,7 @@ text-transform: uppercase;
 }
 
 .footer-social-box {
-  margin: 0;
+  margin-right: 93px;
 }
 
 .logo-footer {
@@ -683,12 +831,57 @@ text-transform: uppercase;
   list-style: none;
   display: flex;
   gap: 10px;
+}
+
+.footer-form {
+  display: flex;
+
+}
+
+.footer-form-mailing {
+  position: relative;
+  margin-right: 163px;
+  margin-bottom: 20px;
+}
+
+.register-mailing-form {
+  position: absolute;
+  left: 0;
+  top: 40px;
+  width: 358px;
+  height: 50px;
+  background-color: #2F303A;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+
+.register-mailing {
+  font-family: 'Roboto';
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 
 }
 
 .social-icon-footer {
   fill: var(--primary-white-color);
 }
+
+.register-footer-icon {
+  position: absolute;
+  top: 13px;
+  right: 28px;
+  fill: var(--primary-white-color);
+}
+
+.btn-register {
+  position: relative;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
 
 .visually-hidden {
   position: absolute;
