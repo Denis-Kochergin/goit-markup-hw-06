@@ -263,17 +263,17 @@ h2 {
   z-index: 5;
   transition: var(--animation);
   background-color: rgba(0, 0, 0, 0.2);
-  transition: transform var(--animation);
+  transition: visibility:var(--animation), opacity:var(--animation);
 }
 
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
-  transition: transform var(--animation);
+  animation: visibility:var(--animation), opacity:var(--animation);
 }
 
-.contanier-register-form {}
+
 
 .modal {
   position: absolute;
@@ -285,7 +285,8 @@ h2 {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transform: translate(-50%, -50%) scale(1);
-  transition: transform var(--animation), visibility:var(--animation), opacity:var(--animation);
+
+
 }
 
 .btn-modal {
@@ -321,7 +322,7 @@ h2 {
   line-height: 1.15;
   letter-spacing: 0.03em;
   align-items: center;
-  margin-bottom: 12px;
+  margin-bottom: 30px;
 }
 
 .register-form-field {
@@ -329,7 +330,7 @@ h2 {
   margin: 0;
   text-align: left;
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 28px;
 
 }
 
@@ -349,7 +350,7 @@ h2 {
 }
 
 .register-form-label {
-  display: inline-block;
+  display: block;
   font-family: 'Roboto';
   font-size: 12px;
   line-height: 1.16px;
@@ -380,7 +381,6 @@ h2 {
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  padding-left: 42px;
   outline: none;
 
 }
@@ -415,7 +415,7 @@ h2 {
   position: absolute;
   left: 15px;
   top: 14px;
-  transform: translateY(14px);
+
 }
 
 textarea {
@@ -430,6 +430,7 @@ textarea {
 
 .register-form-description {
   color: var(--second-text-color);
+
 }
 
 .register-form-link {
@@ -863,6 +864,11 @@ textarea {
 
 .footer-form {
   display: flex;
+
+}
+
+.form-mailing {
+  margin-right: 12px;
 }
 
 .register-mailing-form {
